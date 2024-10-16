@@ -1,7 +1,20 @@
+/* Custom font and colors */
 body {
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FFC300;
 }
 
-h1 {
-    color: #333;
+.navbar {
+    background-color: #343a40 !important;
+    color: white;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Modify button appearance */
+.btn {
+    margin-right: 5px;
 }
