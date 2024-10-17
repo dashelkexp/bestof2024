@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const albumList = document.getElementById('album-list');
-    
+
     // Sample data for testing
     const album = {
         title: "Sample Album",
