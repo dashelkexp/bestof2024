@@ -24,6 +24,78 @@ const albums = [
             apple: "#"
         }
     },
+    {
+        title: "Album 3",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    {
+        title: "Album 4",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    {
+        title: "Album 5",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    {
+        title: "Album 6",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    {
+        title: "Album 7",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    {
+        title: "Album 8",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
     // Add more albums here in this format, up to 100 albums
     {
         title: "Album 100",
