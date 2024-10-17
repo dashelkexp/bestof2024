@@ -1,20 +1,54 @@
-/* Custom font and colors */
+/* General Styles */
 body {
+    background-color: #EDE8CC;
     font-family: 'Figtree', sans-serif;
-    background-color: #EDE8CC ;
 }
 
-.navbar {
-    background-color: #343a40 !important;
-    color: white;
+h1, h2 {
+    margin-top: 20px;
+}
+
+h1 {
+    background-color: #F6B221;
+    color: black;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+/* Album Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
 }
 
 .card-title {
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
-/* Modify button appearance */
-.btn {
-    margin-right: 5px;
+.card-text {
+    margin-bottom: 15px;
 }
+
+/* Most Played Section */
+.most-played h6 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.most-played ul {
+    padding-left: 0;
+}
+
+.most-played ul li {
+    list-style: none;
+}
+
+/* Album Number Styling */
+.album-number {
+    position: absolute;
+    top: 10px
