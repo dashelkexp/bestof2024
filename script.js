@@ -1,54 +1,3 @@
-// Array of album data for 100 albums (add your albums here)
-const albums = [
-    {
-        title: "Album 1",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: [
-            { name: "DJ Alpha", link: "#" },
-            { name: "DJ Beta", link: "#" },
-            { name: "DJ Gamma", link: "#" }
-        ],
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 2",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "A masterpiece in modern music.",
-        mostPlayed: [
-            { name: "DJ Zeta", link: "#" }
-        ],
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    // Add more albums here in this format, up to 100 albums
-    {
-        title: "Album 100",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 100. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Incredible soundscapes and storytelling.",
-        mostPlayed: [
-            { name: "DJ Delta", link: "#" },
-            { name: "DJ Omega", link: "#" }
-        ],
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    }
-];
-
-// Function to create an album card and add it to the page
 function addAlbum(album, index) {
     const albumList = document.getElementById('album-list');
     
@@ -65,11 +14,11 @@ function addAlbum(album, index) {
         `;
     }
 
-    // Create a new card for the album with the number superimposed on the album art
+    // Create a new card for the album
     const albumCard = `
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-12"> <!-- Updated classes for grid layout -->
             <div class="card mb-4 shadow-sm position-relative">
-                <div class="position-absolute top-left album-number">${index + 1}</div> <!-- Superimposed number -->
+                <div class="position-absolute album-number">${index + 1}</div> <!-- Superimposed number -->
                 <img src="${album.img}" class="card-img-top" alt="${album.title}">
                 <div class="card-body">
                     <h5 class="card-title">${album.title}</h5>
@@ -91,15 +40,3 @@ function addAlbum(album, index) {
     // Append the new album card to the album list
     albumList.innerHTML += albumCard;
 }
-
-// Function to add all albums on page load
-function addAllAlbums() {
-    for (let i = 0; i < albums.length; i++) {
-        addAlbum(albums[i], i);
-    }
-}
-
-// Run the function to add all albums when the page is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-    addAllAlbums();
-});
