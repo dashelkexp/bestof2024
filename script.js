@@ -36,8 +36,8 @@
                     </div>
                     <div class="mt-3">
                         <a href="${album.links.bandcamp}" class="btn btn-sm btn-outline-primary">Bandcamp</a>
-                        <a href="${album.links.spotify}" class="btn btn-sm btn-outline-secondary">Spotify</a>
-                        <a href="${album.links.apple}" class="btn btn-sm btn-outline-success">Apple Music</a>
+                        <a href="${album.links.spotify}" class="btn btn-sm btn-outline-success">Spotify</a>
+                        <a href="${album.links.apple}" class="btn btn-sm btn-outline-secondary">Apple Music</a>
                     </div>
                 </div>
             </div>
