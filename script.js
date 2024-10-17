@@ -15,6 +15,54 @@ const albums = [
             apple: "#"
         }
     }
+    {
+        title: "Album 2",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: [
+            { name: "DJ Alpha", link: "#" },
+            { name: "DJ Beta", link: "#" },
+            { name: "DJ Gamma", link: "#" }
+        ],
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    }
+    {
+        title: "Album 3",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: [
+            { name: "DJ Alpha", link: "#" },
+            { name: "DJ Beta", link: "#" },
+            { name: "DJ Gamma", link: "#" }
+        ],
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    }
+    {
+        title: "Album 4",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: [
+            { name: "DJ Alpha", link: "#" },
+            { name: "DJ Beta", link: "#" },
+            { name: "DJ Gamma", link: "#" }
+        ],
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    }
 ];
 
 function addAlbum(album, index) {
