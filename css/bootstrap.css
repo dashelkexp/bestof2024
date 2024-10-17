@@ -95,6 +95,7 @@ body {
   color: white;
   padding: 10px 15px;
   border-radius: 8px;
+  font-family: 'Figtree', sans-serif;
   font-size: 3rem; /* Large for desktop */
   font-weight: bold;
 }
@@ -122,6 +123,7 @@ body {
   color: black;
   font-family: 'Figtree', sans-serif;
   font-size: 3rem;
+  font-weight: bold;
   text-transform: uppercase; /* All caps */
   margin-bottom: 0;
 }

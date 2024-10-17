@@ -1,3 +1,25 @@
+// Array of album data for 100 albums (add your albums here)
+const albums = [
+    {
+        title: "Album 1",
+        img: "https://via.placeholder.com/150",
+        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        quote: "Best album of the year.",
+        mostPlayed: [
+            { name: "DJ Alpha", link: "#" },
+            { name: "DJ Beta", link: "#" },
+            { name: "DJ Gamma", link: "#" }
+        ],
+        links: {
+            bandcamp: "#",
+            spotify: "#",
+            apple: "#"
+        }
+    },
+    // More albums...
+];
+
+// Function to create an album card and add it to the page
 function addAlbum(album, index) {
     const albumList = document.getElementById('album-list');
     
@@ -40,3 +62,15 @@ function addAlbum(album, index) {
     // Append the new album card to the album list
     albumList.innerHTML += albumCard;
 }
+
+// Function to add all albums on page load
+function addAllAlbums() {
+    for (let i = 0; i < albums.length; i++) {
+        addAlbum(albums[i], i);
+    }
+}
+
+// Run the function to add all albums when the page is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+    addAllAlbums();
+});
