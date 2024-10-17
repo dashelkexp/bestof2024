@@ -4,7 +4,7 @@
         title: "Sample Album",
         img: "https://via.placeholder.com/150",
         review: "This is a sample review of the album. It’s a placeholder review.",
-        quote: "This is an amazing album!",
+        quote: "This is an amazing albummmmm!",
         mostPlayed: [
             { name: "DJ Alpha", link: "#" },
             { name: "DJ Beta", link: "#" },
