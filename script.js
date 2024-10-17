@@ -5,7 +5,11 @@ const albums = [
         img: "https://via.placeholder.com/150",
         review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
         quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        mostPlayed: [
+            { name: "DJ Alpha", link: "#" },
+            { name: "DJ Beta", link: "#" },
+            { name: "DJ Gamma", link: "#" }
+        ],
         links: {
             bandcamp: "#",
             spotify: "#",
@@ -17,79 +21,9 @@ const albums = [
         img: "https://via.placeholder.com/150",
         review: "This is a 200-word review of Album 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
         quote: "A masterpiece in modern music.",
-        mostPlayed: ["DJ Zeta"],  // Add DJ(s) here
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 3",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 4",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 5",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 6",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 7",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
-        links: {
-            bandcamp: "#",
-            spotify: "#",
-            apple: "#"
-        }
-    },
-    {
-        title: "Album 8",
-        img: "https://via.placeholder.com/150",
-        review: "This is a 200-word review of Album 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-        quote: "Best album of the year.",
-        mostPlayed: ["DJ Alpha", "DJ Beta", "DJ Gamma"],  // Add up to 3 DJs
+        mostPlayed: [
+            { name: "DJ Zeta", link: "#" }
+        ],
         links: {
             bandcamp: "#",
             spotify: "#",
@@ -102,7 +36,10 @@ const albums = [
         img: "https://via.placeholder.com/150",
         review: "This is a 200-word review of Album 100. Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
         quote: "Incredible soundscapes and storytelling.",
-        mostPlayed: ["DJ Delta", "DJ Omega"],  // Add DJ(s) here
+        mostPlayed: [
+            { name: "DJ Delta", link: "#" },
+            { name: "DJ Omega", link: "#" }
+        ],
         links: {
             bandcamp: "#",
             spotify: "#",
@@ -112,26 +49,27 @@ const albums = [
 ];
 
 // Function to create an album card and add it to the page
-function addAlbum(album) {
+function addAlbum(album, index) {
     const albumList = document.getElementById('album-list');
     
-    // Build the "Most Played" section (handles 0, 1, 2, or 3 DJs)
+    // Build the "Most Played" section with DJ names as hyperlinks
     let mostPlayedSection = '';
     if (album.mostPlayed && album.mostPlayed.length > 0) {
         mostPlayedSection = `
             <div class="most-played mt-3">
                 <h6>Most Played by:</h6>
                 <ul class="list-unstyled">
-                    ${album.mostPlayed.map(dj => `<li>${dj}</li>`).join('')}
+                    ${album.mostPlayed.map(dj => `<li><a href="${dj.link}" target="_blank">${dj.name}</a></li>`).join('')}
                 </ul>
             </div>
         `;
     }
 
-    // Create a new card for the album
+    // Create a new card for the album with the number superimposed on the album art
     const albumCard = `
         <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+            <div class="card mb-4 shadow-sm position-relative">
+                <div class="position-absolute top-left album-number">${index + 1}</div> <!-- Superimposed number -->
                 <img src="${album.img}" class="card-img-top" alt="${album.title}">
                 <div class="card-body">
                     <h5 class="card-title">${album.title}</h5>
@@ -157,7 +95,7 @@ function addAlbum(album) {
 // Function to add all albums on page load
 function addAllAlbums() {
     for (let i = 0; i < albums.length; i++) {
-        addAlbum(albums[i]);
+        addAlbum(albums[i], i);
     }
 }
 
